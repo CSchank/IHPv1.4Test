@@ -1,0 +1,29 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "postCreateCommand": {
+    "Change permissions": "chmod u+x /workspaces/*/install-nix.sh"
+  },
+  "containerEnv": {
+    "PROJECT_DIR": "${containerWorkspaceFolder}"
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "bbenoist.nix",
+        "haskell.haskell",
+        "s0kil.vscode-hsx",
+        "mkhl.direnv",
+        "vigoo.stylish-haskell"
+      ]
+    }
+  }
+}
